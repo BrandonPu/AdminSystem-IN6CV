@@ -5,6 +5,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
+import limiter from '../src/middlewares/validar-cant-peticiones.js'
+import authRoutes from '../src/auth/auth.routes.js'
 
 const configurarMiddlewares = (app) => {
     app.use(express.urlencoded({extended: false}));
@@ -12,10 +14,12 @@ const configurarMiddlewares = (app) => {
     app.use(express.json());
     app.use(helmet());
     app.use(morgan('dev'));
+    app.use(limiter);
 }
 
-const configurarRutas = () => {
-
+const configurarRutas = (app) => {
+    app.use("/adminSystem/v1/auth", authRoutes);
+    
 }
 
 const conectarDB = async() => {
