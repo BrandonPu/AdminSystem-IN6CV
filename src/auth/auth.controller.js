@@ -45,7 +45,7 @@ export const login = async (req, res) => {
             }
         })
         
-    } catch (error) {
+    } catch (e) {
         console.log(e);
 
         return res.status(500).json({
