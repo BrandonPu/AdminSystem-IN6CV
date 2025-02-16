@@ -1,0 +1,35 @@
+{
+  "name": "feature-login",
+  "version": "1.0.0",
+  "description": "Es una administracion de control de alumnos en un centro educativo usando NodeJS, MondoDB y Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrandonPu/AdminSystem-IN6CV.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrandonPu/AdminSystem-IN6CV/issues"
+  },
+  "homepage": "https://github.com/BrandonPu/AdminSystem-IN6CV#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.9"
+  },
+  "type": "module"
+}
