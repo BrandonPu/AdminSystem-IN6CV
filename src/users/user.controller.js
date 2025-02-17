@@ -29,3 +29,28 @@ export const getUsers = async (req = request, res = response) => {
         })
     }
 }
+
+export const deleteUser = async (req, res) => {
+    try {
+        
+        const { id } = req.params;
+
+        const user = await User.findByIdAndUpdate(id, { estado: false }, { new: true });
+
+        const autheticatedUser = req.user;
+
+        res.status(200).json({
+            success: true,
+            msg: "Usario desactivado",
+            user,
+            autheticatedUser
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: "Error al Desactivar Usuario",
+            error
+        })
+    }   
+}
