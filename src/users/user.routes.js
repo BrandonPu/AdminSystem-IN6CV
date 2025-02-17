@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getUsers, deleteUser } from "./user.controller.js";
+import { getUsers, deleteUser, assignCourse } from "./user.controller.js";
 import { existeUsuarioById } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { tieneRole } from "../middlewares/validar-role.js";
@@ -19,5 +19,13 @@ router.delete(
     ],
     deleteUser
 )
+
+router.post(
+    "/assign-course", 
+    [
+    validarJWT,    
+    ], 
+    assignCourse
+);
 
 export default router;
