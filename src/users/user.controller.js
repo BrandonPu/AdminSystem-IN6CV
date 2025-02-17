@@ -159,3 +159,47 @@ export const getAssignedCourses = async (req = request, res = response) => {
     }
 };
 
+export const updateUser = async (req, res = response) => {
+    try {
+        const { id } = req.params;
+        const { _id, password, email, cursos, role, ...data } = req.body;
+
+        // Verificamos si se intentan modificar campos que no se deben modificar
+        if (password || email || cursos || role) {
+            return res.status(400).json({
+                success: false,
+                msg: "No se puede modificar el correo electrónico, la contraseña, los cursos ni el rol"
+            });
+        }
+
+        // Si la contraseña es proporcionada, la hasheamos antes de actualizarla
+        if (password) {
+            data.password = await hash(password);  // En caso de querer actualizar la contraseña
+        }
+
+        // Buscamos al usuario en la base de datos
+        const user = await User.findById(id);
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                msg: "Usuario no encontrado"
+            });
+        }
+
+        // Actualizamos los datos del usuario, excluyendo los campos no permitidos
+        const updatedUser = await User.findByIdAndUpdate(id, data, { new: true });
+
+        res.status(200).json({
+            success: true,
+            msg: "Usuario actualizado exitosamente",
+            user: updatedUser
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: "Error al actualizar el usuario",
+            error: error.message || error
+        });
+    }
+};
