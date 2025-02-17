@@ -32,7 +32,7 @@ const UserSchema = Schema(
         },
         cursos: [{
             type: Schema.Types.ObjectId,
-            ref: "Course",
+            ref: "course",
             default: []
         }],
         estado: {
