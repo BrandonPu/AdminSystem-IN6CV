@@ -59,6 +59,16 @@ export const register = async (req, res) => {
     try {
         const data = req.body;
 
+        const existingUser = await Usuario.findOne({
+            $or: [{ username: data.username }, { email: data.email }]
+        });
+
+        if (existingUser) {
+            return res.status(400).json({
+                message: 'El correo o el nombre de usuario ya están registrados.'
+            });
+        }
+
         const encryptedPassword = await hash(data.password);
 
         const user = await Usuario.create({
@@ -66,24 +76,31 @@ export const register = async (req, res) => {
             surname: data.surname,
             username: data.username,
             email: data.email,
-            password: encryptedPassword, 
+            password: encryptedPassword,
             role: data.role,
             cursos: []
-
-        })
+        });
 
         return res.status(201).json({
-            message: "User registered successfully",
+            message: "Usuario registrado exitosamente",
             userDetails: {
-                user: user.email
+                username: user.username,
+                email: user.email
             }
         });
     } catch (error) {
         console.log(error);
 
+        if (error.code === 11000) {
+            return res.status(400).json({
+                message: "El nombre de usuario o el correo ya están en uso",
+                error: error.message
+            });
+        }
+
         return res.status(500).json({
-            message: "User registration failed",
-            error: err.message
-        })
+            message: "Error al registrar el usuario",
+            error: error.message
+        });
     }
-}
+};
