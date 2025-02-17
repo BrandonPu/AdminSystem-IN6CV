@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { saveCourse, getCourseByTeacher } from "./course.controller.js";
+import { saveCourse, getCourseByTeacher, deleteCourse } from "./course.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 
@@ -23,4 +23,15 @@ router.get(
     ],
     getCourseByTeacher
 )
+
+router.delete(
+    "/:id",
+    [
+        validarJWT,
+        check("id", "No es un ID valido").isMongoId(),
+        validarCampos
+    ],
+    deleteCourse
+)
+
 export default router;

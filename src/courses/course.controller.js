@@ -63,3 +63,24 @@ export const getCourseByTeacher = async (req, res) => {
         });
     }
 }
+
+export const deleteCourse = async (req, res) => {
+     
+    const { id } = req.params;
+
+    try {
+
+        await Course.findByIdAndUpdate(id, { status: false});
+
+        res.status(200).json({
+            success: true,
+            message: "Curso Eliminado exitosamente"
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Error al eliminar Curso intentelo de nuevo",
+            error
+        })
+    }
+}
