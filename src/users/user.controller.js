@@ -124,3 +124,38 @@ export const assignCourse = async (req, res) => {
         });
     }
 }
+
+export const getAssignedCourses = async (req = request, res = response) => {
+    try {
+        const userId = req.usuario._id;
+
+        const user = await User.findById(userId).populate('cursos', 'name'); 
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                msg: 'Usuario no encontrado'
+            });
+        }
+
+        if (!user.cursos || user.cursos.length === 0) {
+            return res.status(404).json({
+                success: false,
+                msg: 'No hay cursos asignados para este usuario'
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            cursos: user.cursos.map(course => course.name) 
+        });
+        
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error al obtener los cursos asignados',
+            error: error.message || error
+        });
+    }
+};
+
