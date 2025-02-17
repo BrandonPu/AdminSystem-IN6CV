@@ -1,0 +1,89 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Courses",
+    "collectionId": "2f0bf1c4-1c7a-4e24-ae27-0f82a0319b6c",
+    "dateExported": "2025-02-17T22:12:13.743Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b09ccc32-3428-4394-8f59-2b6e5643d19a",
+            "colId": "2f0bf1c4-1c7a-4e24-ae27-0f82a0319b6c",
+            "containerId": "",
+            "name": "Agregar curso",
+            "url": "http://localhost:3000/adminSystem/v1/course/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-17T16:43:44.606Z",
+            "modified": "2025-02-17T18:12:15.955Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyNGRiYjE3ZjM2OTk0YjE5MmJiNjgiLCJpYXQiOjE3Mzk4MTA2NzEsImV4cCI6MTczOTgxNzg3MX0.rN_GRE_VsC2aBdSQO3sIgSUaFNbmotzYo_Zyv3tczQU"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Biologia\",\n  \"description\": \"Clase de Biologia\",\n  \"email\": \"juan.perez@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a698f0b5-f963-43cd-a090-23cfbd336535",
+            "colId": "2f0bf1c4-1c7a-4e24-ae27-0f82a0319b6c",
+            "containerId": "",
+            "name": "Ver los cursos del profe id",
+            "url": "http://localhost:3000/adminSystem/v1/course/findcourses/67b24dbb17f36994b192bb68",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-17T17:25:17.955Z",
+            "modified": "2025-02-17T21:58:03.841Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyNjE2M2ZiYzRiYTgyNmVkOWNiNDgiLCJpYXQiOjE3Mzk4MjgzNDMsImV4cCI6MTczOTgzNTU0M30.PyMpT4Kpqsa-SKX14TVN62q7vVC1EtWry3OJnxQm1HY"
+                }
+            ]
+        },
+        {
+            "_id": "7cb476c3-4dbb-4f86-9db8-181c0fe2cc2b",
+            "colId": "2f0bf1c4-1c7a-4e24-ae27-0f82a0319b6c",
+            "containerId": "",
+            "name": "Eliminar Cursos",
+            "url": "http://localhost:3000/adminSystem/v1/course/67b367bce1e0fadd3217dbf7",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-02-17T17:52:36.938Z",
+            "modified": "2025-02-17T22:08:35.285Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyNjE2M2ZiYzRiYTgyNmVkOWNiNDgiLCJpYXQiOjE3Mzk4MjgzNDMsImV4cCI6MTczOTgzNTU0M30.PyMpT4Kpqsa-SKX14TVN62q7vVC1EtWry3OJnxQm1HY"
+                }
+            ]
+        },
+        {
+            "_id": "942a0d48-78ae-4965-9226-3b04364781e5",
+            "colId": "2f0bf1c4-1c7a-4e24-ae27-0f82a0319b6c",
+            "containerId": "",
+            "name": "Actualizar Cursos",
+            "url": "http://localhost:3000/adminSystem/v1/course/67b367bce1e0fadd3217dbf7",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2025-02-17T21:54:03.746Z",
+            "modified": "2025-02-17T21:59:24.785Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyNjE2M2ZiYzRiYTgyNmVkOWNiNDgiLCJpYXQiOjE3Mzk4MjgzNDMsImV4cCI6MTczOTgzNTU0M30.PyMpT4Kpqsa-SKX14TVN62q7vVC1EtWry3OJnxQm1HY"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Nuevo curso de Matemáticas\",\n    \"description\": \"Descripción actualizada del curso de Matemáticas\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "aoOMklK0870Necaq19tcJePEXZXYF1rz0vEY_ayPXSpenNf6e04baKelDEY_vg6u1CLxp13Rj3uUOLYQjdZNGA"
+}

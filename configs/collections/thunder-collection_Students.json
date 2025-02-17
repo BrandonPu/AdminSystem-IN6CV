@@ -1,0 +1,108 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Students",
+    "collectionId": "13818fae-936e-43ec-8f6d-66ff753dacbd",
+    "dateExported": "2025-02-17T22:12:00.153Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ddc74983-95ed-4897-a467-cde0cd106538",
+            "colId": "13818fae-936e-43ec-8f6d-66ff753dacbd",
+            "containerId": "",
+            "name": "Actualizar Stundent",
+            "url": "http://localhost:3000/adminSystem/v1/users/67b26163fbc4ba826ed9cb48",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2025-02-17T14:09:59.749Z",
+            "modified": "2025-02-17T21:40:33.149Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyNjE2M2ZiYzRiYTgyNmVkOWNiNDgiLCJpYXQiOjE3Mzk4MjgzNDMsImV4cCI6MTczOTgzNTU0M30.PyMpT4Kpqsa-SKX14TVN62q7vVC1EtWry3OJnxQm1HY"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Luis\",\n  \"surname\": \"Pichiya\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0fbfc50f-5b09-4e16-b0f4-05dd8b6f5a5a",
+            "colId": "13818fae-936e-43ec-8f6d-66ff753dacbd",
+            "containerId": "",
+            "name": "Listar Usuarios",
+            "url": "http://localhost:3000/adminSystem/v1/users?limite=10&desde=0",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-17T14:16:53.781Z",
+            "modified": "2025-02-17T14:17:50.756Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limite",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "desde",
+                    "value": "0",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "c137f879-f8a0-4c0f-ab94-e2f95a27e177",
+            "colId": "13818fae-936e-43ec-8f6d-66ff753dacbd",
+            "containerId": "",
+            "name": "eliminar student",
+            "url": "http://localhost:3000/adminSystem/v1/users/67b26794330b1dcc6ea21a9b",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-02-17T15:17:08.938Z",
+            "modified": "2025-02-17T15:17:46.459Z",
+            "headers": []
+        },
+        {
+            "_id": "7102b4d4-f148-46b6-bf42-8481d3a6afa0",
+            "colId": "13818fae-936e-43ec-8f6d-66ff753dacbd",
+            "containerId": "",
+            "name": "Asignar cursos",
+            "url": "http://localhost:3000/adminSystem/v1/users/assign-course",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2025-02-17T18:03:03.475Z",
+            "modified": "2025-02-17T18:12:38.494Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyNjE2M2ZiYzRiYTgyNmVkOWNiNDgiLCJpYXQiOjE3Mzk4MTU1NDIsImV4cCI6MTczOTgyMjc0Mn0.5kbnHQcClxU-Zq_aap_rBnRRX-J_vcjIpr0YT_7xzTo"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"studentId\": \"67b26163fbc4ba826ed9cb48\",\n  \"courseId\": [\"67b37bff9a81dd9285c493bb\"]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0f7bc64a-0976-4939-b0df-1ebebc67b4dd",
+            "colId": "13818fae-936e-43ec-8f6d-66ff753dacbd",
+            "containerId": "",
+            "name": "Ver cursos que tengamos",
+            "url": "http://localhost:3000/adminSystem/v1/users/assigned-courses",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-02-17T19:05:35.204Z",
+            "modified": "2025-02-17T20:39:57.135Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2IyNjE2M2ZiYzRiYTgyNmVkOWNiNDgiLCJpYXQiOjE3Mzk4MjQ2NjEsImV4cCI6MTczOTgzMTg2MX0.mz3hx_ZFlZCIRmHLIP7l4kM3PnuSS72PbHGEQ-dZ3hk"
+                }
+            ]
+        }
+    ],
+    "ref": "uf-6ClqhTdJOoRjRnFhfLMejsTD0Ec6OzNH_YZ7Rtxl8dKGXOzP2h6rSR8HZyvhHJcj0IlW7IuEUjztS2C70OQ"
+}

@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "67b24dbb17f36994b192bb68"
+  },
+  "name": "Juan",
+  "surname": "Pérez",
+  "username": "juanperez",
+  "email": "juan.perez@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$K6nZjVagRZHgfc50WwdQlg$SxAmPIeBinOUBAYtTBYFPP+CD9+W72bNcq/0qj/RYzI",
+  "role": "TEACHER_ROLE",
+  "cursos": [],
+  "estado": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67b26163fbc4ba826ed9cb48"
+  },
+  "name": "Luis",
+  "surname": "Pichiya",
+  "username": "lpichiya",
+  "email": "lpichiya2007@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ID+QyTK1PFrjwL3IPNQSpg$S3KkpssXIBGjDmcKGP4K6GoXO+MUAUvqkOT2lLkxz0s",
+  "role": "STUDENT_ROLE",
+  "cursos": [
+    {
+      "$oid": "67b371a137b7d81ed73dc76d"
+    },
+    {
+      "$oid": "67b37bf09a81dd9285c493b7"
+    }
+  ],
+  "estado": true,
+  "__v": 0,
+  "updatedAt": {
+    "$date": "2025-02-17T22:08:35.249Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b26794330b1dcc6ea21a9b"
+  },
+  "name": "Manuel",
+  "surname": "Tejeda",
+  "username": "mtejeda",
+  "email": "mtejeda2000@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$qzEp+gCItCUR+8IdVzdPfg$zx1aLZXKncuZ9Wph4OGOl0f2FrKl4LdKh8M2S1t0sm4",
+  "role": "STUDENT_ROLE",
+  "cursos": [],
+  "estado": false,
+  "__v": 0,
+  "updatedAt": {
+    "$date": "2025-02-17T15:18:58.037Z"
+  }
+}]

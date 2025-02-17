@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "67b367bce1e0fadd3217dbf7"
+  },
+  "name": "Nuevo curso de Matemáticas",
+  "description": "Descripción actualizada del curso de Matemáticas",
+  "coordinator": {
+    "$oid": "67b24dbb17f36994b192bb68"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-02-17T16:45:48.406Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T22:08:35.271Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b371a137b7d81ed73dc76d"
+  },
+  "name": "Matematicas",
+  "description": "Clase de Operaciones",
+  "coordinator": {
+    "$oid": "67b24dbb17f36994b192bb68"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T17:28:01.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T17:28:01.531Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b37bf09a81dd9285c493b7"
+  },
+  "name": "Lectura",
+  "description": "Clase de Lectura",
+  "coordinator": {
+    "$oid": "67b24dbb17f36994b192bb68"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T18:12:00.859Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T18:12:00.859Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67b37bff9a81dd9285c493bb"
+  },
+  "name": "Biologia",
+  "description": "Clase de Biologia",
+  "coordinator": {
+    "$oid": "67b24dbb17f36994b192bb68"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-17T18:12:15.932Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-17T18:12:15.932Z"
+  }
+}]

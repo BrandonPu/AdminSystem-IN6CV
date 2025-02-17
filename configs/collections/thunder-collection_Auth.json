@@ -1,0 +1,45 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Auth",
+    "collectionId": "63bb3552-5874-439b-8e5a-08de819a702c",
+    "dateExported": "2025-02-17T22:11:44.858Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a09abda2-11ed-4249-8e38-a624cdd8f1df",
+            "colId": "63bb3552-5874-439b-8e5a-08de819a702c",
+            "containerId": "",
+            "name": "Register",
+            "url": "http://localhost:3000/adminSystem/v1/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-16T20:34:26.878Z",
+            "modified": "2025-02-16T22:32:28.706Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Manuel\",\n  \"surname\": \"Tejeda\",\n  \"username\": \"mtejeda\",\n  \"email\": \"mtejeda2000@gmail.com\",\n  \"password\": \"12345678\",\n  \"role\": \"STUDENT_ROLE\",\n  \"cursos\": []\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "a2e62323-a863-4753-9046-fe4562f76a05",
+            "colId": "63bb3552-5874-439b-8e5a-08de819a702c",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3000/adminSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-16T22:09:49.896Z",
+            "modified": "2025-02-17T18:05:43.022Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"lpichiya@gmail.com\",\n  \"password\": \"12345678\",\n  \"username\": \"lpichiya\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "jrcsdB4RwwckVxkd8fxSh219cSzuBG4y5-fC4qgprej2hRCmrS3kixiQKRAZN1O2N2RVvbuVLHg-p8jpAdla0Q"
+}

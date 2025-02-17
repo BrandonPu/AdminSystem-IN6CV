@@ -65,25 +65,42 @@ export const getCourseByTeacher = async (req, res) => {
 }
 
 export const deleteCourse = async (req, res) => {
-     
+    
     const { id } = req.params;
 
     try {
+        // Buscar el curso a eliminar
+        const course = await Course.findById(id);
+        
+        if (!course) {
+            return res.status(404).json({
+                success: false,
+                message: "Curso no encontrado"
+            });
+        }
 
-        await Course.findByIdAndUpdate(id, { status: false});
+        // Desasignar a los estudiantes del curso
+        await User.updateMany(
+            { cursos: id },  // Buscar estudiantes que tengan este curso asignado
+            { $pull: { cursos: id } }  // Eliminar el curso de su lista de cursos
+        );
+
+        // Cambiar el estado del curso a 'false' (marcarlo como eliminado)
+        await Course.findByIdAndUpdate(id, { status: false });
 
         res.status(200).json({
             success: true,
-            message: "Curso Eliminado exitosamente"
-        })
+            message: "Curso eliminado y estudiantes desasignados exitosamente"
+        });
     } catch (error) {
         res.status(500).json({
             success: false,
-            message: "Error al eliminar Curso intentelo de nuevo",
+            message: "Error al eliminar curso, intente de nuevo",
             error
-        })
+        });
     }
-}
+};
+
 
 export const updateCourse = async (req, res) => {
     try {
